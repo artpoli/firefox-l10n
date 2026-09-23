@@ -27,4 +27,4 @@
 # remain unchanged across different versions (Nightly, Beta, etc.).
 -brand-product-name = Firefox
 -vendor-short-name = Mozilla
-trademarkInfo = Firefox e i logo di Firefox sono marchi registrati di Mozilla Foundation.
+trademarkInfo = Firefox und die Firefox-Logos sind Warenzeichen der Mozilla Foundation.
