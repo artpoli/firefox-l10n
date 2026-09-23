@@ -1,0 +1,178 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# Access Connector is an Enterprise feature name and must not be translated.
+-enterprise-feature-access-connector = Connecteur d’accès
+# Shown in the About dialog on enterprise builds.
+aboutdialog-managed-notice = Votre organisation administre votre navigateur.
+# Shown in the About dialog on enterprise nightly builds.
+warningdesc-version-enterprise-nightly = Le canal de distribution { -brand-nightly-channel } est expérimental et peut être instable.
+# Shown in the about:support "Application Basics" table on enterprise builds.
+app-basics-device-id = Identifiant de l’appareil
+# Shown in the about:support "Security Software" section on enterprise builds.
+# Endpoint Detection and Response is an industry term and must remain in English.
+security-software-edr = Endpoint Detection and Response
+# Shown in the about:support "Security Software" section on enterprise builds.
+security-software-disk-encryption = Chiffrement du disque
+# All relevant storage was checked and is encrypted: the operating-system volume,
+# other mounted fixed volumes (storage areas on non-removable disks), and active
+# Linux swap (disk space used to hold memory contents). Linux boot partitions
+# mounted at /boot, /boot/efi, or /efi are excluded. This variant is used when
+# the encryption technology name is unavailable.
+security-software-disk-encryption-full = Activé
+# All relevant storage was checked and is encrypted, including the operating-system
+# volume, other mounted fixed volumes, and active Linux swap. Linux boot
+# partitions mounted at /boot, /boot/efi, or /efi are excluded.
+# Variables:
+#   $method (String): Encryption technology name: "BitLocker", "FileVault",
+#   "dm-crypt", or "ZFS". Inserted unchanged; do not translate the name.
+security-software-disk-encryption-full-with-method = Activé ({ $method })
+# The operating-system volume is encrypted and no unencrypted storage was found,
+# but Firefox could not verify encryption for all relevant storage. "Inspection
+# incomplete" describes an incomplete check, not encryption still in progress.
+# This variant is used when the encryption technology name is unavailable.
+security-software-disk-encryption-enabled = Activé ; vérification incomplète
+# The operating-system volume is encrypted and no unencrypted storage was found,
+# but Firefox could not verify encryption for all relevant storage. "Inspection
+# incomplete" describes an incomplete check, not encryption still in progress.
+# Variables:
+#   $method (String): Encryption technology name: "BitLocker", "FileVault",
+#   "dm-crypt", or "ZFS". Inserted unchanged; do not translate the name.
+security-software-disk-encryption-enabled-with-method = Activé ({ $method }) ; vérification incomplète
+# The operating-system volume is encrypted, but another mounted fixed volume or
+# active Linux swap is known to be unencrypted. "Partial" describes encryption
+# coverage across storage areas, not the progress of an encryption operation.
+# This variant is used when the encryption technology name is unavailable.
+security-software-disk-encryption-partial = Partiel ; certaines zones de stockage ne sont pas chiffrées
+# The operating-system volume is encrypted, but another mounted fixed volume or
+# active Linux swap is known to be unencrypted. "Partial" describes encryption
+# coverage across storage areas, not the progress of an encryption operation.
+# Variables:
+#   $method (String): Encryption technology name: "BitLocker", "FileVault",
+#   "dm-crypt", or "ZFS". Inserted unchanged; do not translate the name.
+security-software-disk-encryption-partial-with-method = Partiel ({ $method }) ; certaines zones de stockage ne sont pas chiffrées
+# The operating-system volume is not encrypted. Other storage may be encrypted.
+security-software-disk-encryption-disabled = Désactivé
+# An inspected volume is being encrypted or decrypted. This describes an ongoing
+# operation, unlike incomplete inspection or partial encryption coverage.
+security-software-disk-encryption-in-progress = Chiffrement ou déchiffrement en cours
+# Firefox could not determine whether the operating-system volume is encrypted.
+# This does not mean that encryption is disabled.
+security-software-disk-encryption-unknown = Inconnu
+enterprise-toolbar-button =
+    .label = { -brand-short-name }
+    .tooltiptext = { -brand-short-name }
+enterprise-panel =
+    .label = Panneau { -brand-short-name }
+    .tooltiptext = Panneau { -brand-short-name }
+enterprise-panel-alert = Une partie de votre activité est surveillée
+enterprise-panel-information = Vous êtes identifiés dans un navigateur géré par une entreprise. Certaines activités de navigation pourraient être surveillées par l’entreprise à des fins de sécurité et de conformité.
+enterprise-panel-learn-more = En savoir plus
+enterprise-panel-sign-out-btn =
+    .label = Se déconnecter…
+enterprise-close-prompt-title = Fermer { -brand-short-name } ?
+# Variables:
+#   $tabCount (Number): The number of tabs to be closed.
+enterprise-close-prompt-title-with-tabcount-and-signout-warning =
+    { $tabCount ->
+        [one] Fermer { -brand-short-name } et { $tabCount } onglet ?
+       *[other] Fermer { -brand-short-name } et { $tabCount } onglets ?
+    }
+# Variables:
+#   $tabCount (Number): The number of tabs to be closed.
+enterprise-close-prompt-title-with-tabcount =
+    { $tabCount ->
+        [one] Fermer { $tabCount } onglet ?
+       *[other] Fermer { $tabCount } onglets ?
+    }
+enterprise-close-prompt-message = Vous êtes sur le point de vous déconnecter de { -brand-short-name } et de mettre fin à votre session.
+# Variables:
+#   $tabCount (Number): The number of tabs to be closed.
+enterprise-close-prompt-message-with-tabcount-and-signout-warning =
+    { $tabCount ->
+        [one] Vous êtes sur le point de vous déconnecter de { -brand-short-name } et de fermer { $tabCount } onglet.
+       *[other] Vous êtes sur le point de vous déconnecter de { -brand-short-name } et de fermer { $tabCount } onglets.
+    }
+enterprise-close-prompt-message-with-tabcount = Fermer { -brand-short-name } vous déconnectera également.
+enterprise-close-prompt-message-reauth = Pour utiliser à nouveau { -brand-short-name }, vous devrez vous réauthentifier via le fournisseur SSO de votre organisation.
+enterprise-close-prompt-checkbox-label = M’avertir si la fermeture de { -brand-short-name } entraîne ma déconnexion
+enterprise-close-prompt-tabs-checkbox-label = M’avertir avant de fermer plusieurs onglets
+enterprise-close-prompt-primary-btn-label = Fermer et se déconnecter
+# Shown instead of the sign-out variants when the session is locked (persisted)
+# on close rather than signed out.
+enterprise-close-prompt-message-lock = Votre session sera verrouillée.
+# Variables:
+#   $tabCount (Number): The number of tabs to be closed.
+enterprise-close-prompt-message-with-tabcount-and-lock-warning =
+    { $tabCount ->
+        [one] Votre session sera verrouillée et { $tabCount } onglet sera fermé.
+       *[other] Votre session sera verrouillée et { $tabCount } onglets seront fermés.
+    }
+enterprise-close-prompt-message-with-tabcount-lock = La fermeture de { -brand-short-name } verrouillera votre session.
+enterprise-close-prompt-message-lock-reauth = Vous pourrez reprendre votre session après vous être authentifié·e sur cet appareil.
+enterprise-close-prompt-checkbox-label-lock = M’avertir si la fermeture de { -brand-short-name } verrouille ma session
+enterprise-close-prompt-primary-btn-label-lock = Fermer et verrouiller
+enterprise-quit-shortcut-prompt-title-with-tabs = Quitter { -brand-short-name } ou fermer l’onglet actuel ?
+enterprise-quit-shortcut-prompt-title = Fermer la fenêtre et quitter { -brand-short-name } ?
+enterprise-quit-shortcut-prompt-message = Quitter vous déconnectera de votre session. Vous devrez vous authentifier à nouveau via le fournisseur SSO de votre organisation.
+enterprise-quit-shortcut-prompt-primary-btn-label = Quitter et se déconnecter
+restart-forced-title = Redémarrer { -brand-short-name }
+restart-forced-heading = Redémarrer pour continuer à utiliser { -brand-short-name }.
+restart-forced-intro = Une politique de l’entreprise nécessite le redémarrage de { -brand-short-name }.
+window-restoration-info = Vos fenêtres et vos onglets seront rapidement restaurés, sauf les fenêtres et onglets privés.
+restart-button-label = Redémarrer { -brand-short-name }
+# Variables:
+#   $datetime (number) - Timestamp of the time the browser will be restarted at.
+enterprise-relaunch-warning-message = <strong>Votre administrateur exige le redémarrage de { -brand-short-name }.</strong> Il redémarrera le { DATETIME($datetime, dateStyle: "short", timeStyle: "short") }. Les onglets seront rouverts.
+# Variables:
+#   $minutes (number) - How many minutes are left before the browser restarts.
+enterprise-relaunch-imminent-message =
+    { $minutes ->
+        [one] <strong>{ -brand-short-name } redémarrera dans { $minutes } minute.</strong> Enregistrez votre travail maintenant. Les onglets seront rouverts.
+       *[other] <strong>{ -brand-short-name } redémarrera dans { $minutes } minutes.</strong> Enregistrez votre travail maintenant. Les onglets seront rouverts.
+    }
+enterprise-relaunch-restart-now = Redémarrer maintenant
+extension-firefox-enterprise-auto-name = Thème { -brand-short-name } – auto
+extension-firefox-enterprise-auto-description = Des tons chauds de rose poudré et d’abricot en mode clair, de violet profond et d’indigo en mode sombre.
+extension-firefox-enterprise-light-name = Firefox Enterprise Light
+extension-firefox-enterprise-light-description = Un thème pastel léger avec des touches de soleil matinal dans le coin.
+extension-firefox-enterprise-dark-name = Firefox Enterprise Dark
+extension-firefox-enterprise-dark-description = Un thème du fond de la nuit avec de dégradés foncés bleu pétrole, et d’autres dégradés bleu clair plus subtils.
+lockdown-mode-button =
+    .aria-label = Affichage avec restrictions
+    .tooltiptext = Affichage avec restrictions
+lockdown-mode-popup-header = Affichage avec restrictions appliqué
+lockdown-mode-popup-message = Cette page est affichée avec des mesures de sécurité renforcées mises en place par votre organisation. Certaines fonctionnalités pourraient être restreintes afin de limiter les risques liés à la sécurité.
+access-connector-button =
+    .aria-label = { -enterprise-feature-access-connector } activé
+    .tooltiptext = { -enterprise-feature-access-connector } activé
+access-connector-panel-header = { -enterprise-feature-access-connector } activé
+access-connector-panel-message = Les connexions à ce site utilisent des méthodes d’authentification supplémentaires et sont acheminées via un proxy d’entreprise sécurisé.
+access-connector-button-error =
+    .aria-label = { -enterprise-feature-access-connector } indisponible
+    .tooltiptext = { -enterprise-feature-access-connector } indisponible
+access-connector-panel-header-error = { -enterprise-feature-access-connector } indisponible
+access-connector-panel-message-error = Le site est configuré pour utiliser des méthodes d’authentification supplémentaires et est acheminé via un proxy d’entreprise sécurisé, mais le{ -enterprise-feature-access-connector } est actuellement indisponible. Réessayez plus tard ou contactez votre administrateur si le problème persiste.
+blocked-by-policy-title-enterprise = L’accès à ce site est interdit
+neterror-blocked-by-policy-page-title-enterprise = L’accès à ce site est interdit
+neterror-blocked-by-policy-contact-admin = Si vous pensez que c’est une erreur ou avez besoin d’y accéder pour des raisons professionnelles, merci de contacter votre administrateur.
+crashed-policy-auto-submit-title = Les rapports de plantage nous aident à nous améliorer
+crashed-policy-auto-submit-message = Votre administrateur a paramétré { -brand-short-name } pour envoyer automatiquement les rapports de plantage.
+fp-neterror-access-connector-error-title = Impossible d’accéder à ce site web
+fp-neterror-access-connector-error-description = Votre organisation fait transiter ce site par un service de connexion sécurisée, mais ce service est actuellement indisponible.
+fp-neterror-access-connector-error-contact-admin = Réessayez ultérieurement, ou contactez votre administrateur si vous avez besoin d’y accéder.
+# Labels the message an administrator wrote for the data protection rule that
+# was matched, shown in the warn and block dialogs above that message.
+contentanalysis-admin-message-label = Message de votre administrateur
+# Shown in the about:preferences data collection section.
+# Variant of data-collection (preferences.ftl) without the description.
+data-collection-enterprise =
+    .label = Collecte de données par { -brand-short-name } et utilisation
+    .searchkeywords = télémétrie
+# Shown in the about:preferences data collection section.
+# Variant of data-collection-backlogged-crash-reports (preferences.ftl).
+data-collection-backlogged-crash-reports-enterprise =
+    .description = Les rapports de plantage aident votre organisation à diagnostiquer et à résoudre les problèmes du navigateur. Les rapports peuvent contenir des données personnelles ou sensibles.
+    .label = Envoyer automatiquement les rapports de plantage
+    .accesskey = E
